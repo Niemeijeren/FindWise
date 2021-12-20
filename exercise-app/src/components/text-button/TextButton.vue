@@ -1,32 +1,25 @@
 <template>
-  <div class="hello">
-    <p>Parent</p>
-    <input v-model="message" />
-
-    <p>Child</p>
-    <TextButton v-bind:msg="message"></TextButton>
+  <div class="text-button">
+      <button>{{msg}}</button>
     
   </div>
 </template>
 
 <script>
-import TextButton from './text-button/TextButton.vue'
-
 export default {
-  name: 'HelloWorld',
-  components: {
-    TextButton
-  },
+  name: 'TextButton',
   props: {
-    message: String
+    msg: String
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+button {
+    margin: 2px;
+  min-height: 30px;
+  min-width: 70px;
 }
 ul {
   list-style-type: none;
