@@ -1,15 +1,20 @@
 <template>
   <div class="text-button">
-      <button>{{msg}}</button>
-    
+    <md-button class="md-raised md-primary">
+        {{msg}}
+        <component :is="icon" />
+    </md-button>
+
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'TextButton',
   props: {
-    msg: String
+    msg: String,
+    icon: String
   }
 }
 </script>
@@ -17,9 +22,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 button {
-    margin: 2px;
-  min-height: 30px;
-  min-width: 70px;
+  margin: 2px;
+  min-height: 40px;
+  min-width: 100px;
+  justify-content: center;
 }
 ul {
   list-style-type: none;

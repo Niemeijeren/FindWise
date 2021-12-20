@@ -2,9 +2,9 @@
   <div class="hello">
     <p>Parent</p>
     <input v-model="message" />
-
     <p>Child</p>
-    <TextButton v-bind:msg="message"></TextButton>
+    <TextButton v-bind:msg="message" icon="menu-icon">
+    </TextButton>
     
   </div>
 </template>
@@ -15,10 +15,11 @@ import TextButton from './text-button/TextButton.vue'
 export default {
   name: 'HelloWorld',
   components: {
-    TextButton
+    TextButton,
   },
   props: {
-    message: String
+    message: String,
+    icon: String
   }
 }
 </script>
