@@ -3,7 +3,7 @@
     <p>Parent</p>
     <input v-model="message" />
     <p>Child</p>
-    <TextButton v-bind:msg="message" icon="menu-icon">
+    <TextButton v-bind:msg="message" icon1="menu-icon" icon2="menu-icon">
     </TextButton>
     
   </div>

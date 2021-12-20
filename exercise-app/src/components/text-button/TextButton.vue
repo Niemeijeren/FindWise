@@ -1,8 +1,9 @@
 <template>
   <div class="text-button">
     <md-button class="md-raised md-primary">
-        {{msg}}
-        <component :is="icon" />
+        <component :is="icon1" class="icon" />
+        <p style="display:inline">{{msg}}</p>
+        <component :is="icon2" class="icon" />
     </md-button>
 
   </div>
@@ -14,7 +15,8 @@ export default {
   name: 'TextButton',
   props: {
     msg: String,
-    icon: String
+    icon1: String,
+    icon2: String
   }
 }
 </script>
@@ -23,9 +25,15 @@ export default {
 <style scoped>
 button {
   margin: 2px;
+  padding: auto;
   min-height: 40px;
   min-width: 100px;
-  justify-content: center;
+  vertical-align: top;
+}
+.icon {
+    padding: 0;
+    width: 24px;
+    height: 24px;
 }
 ul {
   list-style-type: none;
